@@ -1,7 +1,7 @@
 /* Styles généraux de la page */
 body {
     background: #ffffff;
-    font-family: sans-serif;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne */
     margin: 0;
     padding: 15px;
     box-sizing: border-box;
