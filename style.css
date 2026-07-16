@@ -1,0 +1,79 @@
+/* Styles généraux de la page */
+body {
+    background: #ffffff;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    color: #000000;
+}
+
+/* SECTION GLOBAL DU CUBE (Titre + Boite) */
+.cube-section {
+    width: 100%;
+    max-width: 500px; /* Limite la largeur sur ordinateur */
+    margin: 30px auto; /* Centre l'ensemble à l'écran */
+    text-align: center;
+}
+
+.cube-section h1 {
+    color: purple;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+/* REND LE CONTENEUR DU CUBE ENTIÈREMENT RESPONSIVE */
+#cube-box {
+    width: 100%;             /* Prend toute la largeur disponible sur mobile */
+    max-width: 400px;        /* Ne dépasse pas 400px sur ordinateur */
+    height: auto;
+    aspect-ratio: 1 / 1;     /* Force un format carré parfait (ex: 400x400 ou 320x320) */
+    margin: 0 auto;          /* Centre le cube */
+    border: 1px solid #eee;  /* Optionnel : Légère bordure pour le délimiter */
+    box-sizing: border-box;
+}
+
+#cube-box h2 {
+    color: #12ffff;          /* Reprise de votre couleur cyan d'origine */
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Force les éléments injectés par AnimCube (canvas/div) à remplir la boîte */
+#cube-box div, 
+#cube-box canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* LES ZONES DE TEXTE D'EXPLICATION */
+.explication {
+    margin: 40px auto;
+    max-width: 700px;        /* Confort de lecture sur ordinateur */
+    padding: 0 10px;
+}
+
+.explication h2 {
+    color: #d4b200;          /* Un jaune plus sombre pour être lisible sur fond blanc */
+    font-size: 1.3rem;
+}
+
+.explication p {
+    margin-bottom: 15px;
+    color: green;
+    line-height: 1.5;        /* Espacement agréable pour les écrans de téléphones */
+}
+
+/* Ajustements pour les très petits écrans Android (Moins de 400px de large) */
+@media (max-width: 400px) {
+    body {
+        padding: 10px;
+    }
+    .cube-section h1 {
+        font-size: 1.3rem;
+    }
+    .explication h2 {
+        font-size: 1.1rem;
+    }
+}
