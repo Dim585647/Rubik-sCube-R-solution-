@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon projet Rubik's Cube</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="AnimCube3.js"></script>
+</head>
+<body>
+
+    <!-- BARRE DE NAVIGATION AVEC MENU DÉROULANT (Intacte) -->
+    <nav class="menu-navigation">
+        <a href="index.html" class="lien-menu">Accueil</a>
+
+        <div class="onglet-deroulant">
+            <button class="bouton-deroulant">Mes Pages ▾</button>
+            <div class="liste-liens">
+                <a href="page1.html">Résoudre le Rubik's</a>
+                <a href="page2.html">OLL & PLL</a>
+                <a href="page3.html">Méthode Débutant</a>
+                <a href="page4.html">Mon Histoire</a>
+            </div>
+        </div>
+
+        <a href="contact.html" class="lien-menu">Contact</a>
+    </nav>
+
+    <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°1
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°1 -->
+        <div class="explication-haut">
+            <h1>➕ (LA CROIX)</h1>
+            <h2>Sous-titre</h2>
+            <p>Paragraphe d'explication situé au-dessus du premier cube.</p>
+            <p>Ajoutez autant de lignes de texte que vous le souhaitez ici.</p>
+        </div>
+          
+        <!-- LE CUBE N°1 -->
+        <div class="cube-box">
+            <script>
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&movetext=0&textsize=33&position=llu&borderwidth=6&wca=2&speed=10&facelets=ybgrwywyowobryrbgrgbowggowrbwyrbwgoorbryobggyyoworywgb&move=R F' L' D' F F z F' R F  z'");
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°1 -->
+        <div class="explication-bas">
+            <h1>titre</h1>
+            <h2>Sous-titre H2 - Cube 1</h2>
+            <p>Paragraphe d'explication situé en dessous du premier cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°1 -->
+
+
+    <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°2
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>LES 4  ARÊTES DE LA CROIX CHACUNE SUR SA COULEUR</h1>
+            <h2>Chercher 2 Arrêtes de la croix blanche qui se suivent et qui sont bien disposer chacune sur sa couleur correspondante.</h2>
+            <p>Ici l'arête Bleu et Rouge sont bien sur leurs couleurs et se suivent.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&movetext=0&textsize=33&position=llu&borderwidth=6&facelets=bwgwwwwwobyryybybgwgrgggwobgyyrbrgrwobrroyybbogooroyor&move=z' z' U z' z'");
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Disposer les 2 Arêtes sur leurs bonne couleurs a droite.</h1>
+            <h2>L'arête pas sur sa couleur en face avant</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+
+  <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°3
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Titre Principal H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé au-dessus du deuxième cube.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&movetext=0&textsize=33&position=llu&borderwidth=6&facelets=gwowwwbwwbyryybybgogroggyobryybbrorwwgwroyybbggorrogor&move=R U R' U R U U R' U");
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>HFD / DFH / BFD / DFH / HFD / DFH / DFH / BFD /  DFH</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+
+  <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°4
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Disposer le coin en dessous de ses couleurs correspondantes</h1>
+            <h2>Si le coin a installer se trouve en haut du cube et n'est pas deja disposer sur c'est 2 couleurs d'appartenance, le sortir de sa mauvaise position et remettre l'arrête qui forme la croix a sa place</h2>
+            <p>Installer le coin en dessous de ses deux couleurs d'appartenance. par la gauche ou par la droite, c'est selon. ⚠ attention : selon que vous installé le coin de par la gauche ou la droite, la formule est inversé. voir les exemples.</p>
+
+<p>Placer le Coin en dessous</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&movetext=0&textsize=33&position=llu&borderwidth=6&facelets=owgwwwgwybyryybybgbgrgggwoboyybbrrrwwowroyybbogorrogor&move=R' D' R z'");
+            </script>
+        </div> 
+<!--R' D' R D  R' D' R D R' D' R D-->
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+
+  <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°5
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Formule, placer le coin Vert Orange Blanc</h1>
+            <h2>Par la Droite</h2>
+            <p>Formule pour installer le coin par la droite</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&movetext=0&textsize=33&position=llu&&borderwidth=6&facelets=gwowwwywobygyybwobwyroogwrgyrwrrogorrborbyybybgogggbbr&move=R' D' R D R' D' R D R' D' R D");
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+
+  <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°6
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Disposer le coin Bleu, Blanc, Orange en dessous de ses couleurs d'appartenances</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé au-dessus du deuxième cube.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&movetext=0&textsize=33&position=llu&borderwidth=6&position=llu&facelets=gwwwwwywobywyyboorwyroogorbyrgrrogobrborbyybrggwgggbby&move=u'");
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+
+  <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°7
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Titre Principal H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé au-dessus du deuxième cube.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&movetext=0&textsize=33&position=llu&borderwidth=6&facelets=ywgwwwowwbywyybooroyrbbgrrbgggggobbbgryorrybrwywoogory&move=R' D' R D");
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+
+<!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°7
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Titre Principal H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé au-dessus du deuxième cube.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&movetext=0&textsize=33&position=llu&&borderwidth=6&&facelets=ywwwwwowwbyryyorrroyrbbgbbgggbgggbbygryorrybgoowooyorw&move=u' u'");
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+
+<!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°7
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Titre Principal H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé au-dessus du deuxième cube.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&movetext=0&textsize=33&position=llu&&borderwidth=6&facelets=wwowwwwwybyryyorrrggrgggbbgoybbbgbbyooorooybgyrwrrygow&move=R' D' R D");
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+
+<!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°7
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Titre Principal H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé au-dessus du deuxième cube.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&movetext=0&textsize=33&position=llu&&borderwidth=6&position=llu&facelets=wwwwwwwwybyryyrbbgggrggggoooyybbybbwooorooybbrgyrrrgor&move=z D'");
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+
+  <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°8
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Titre Principal H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé au-dessus du deuxième cube.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&movetext=0&textsize=33&position=llu&&borderwidth=6&&facelets=wwywwwwwwgbbryyrybrgyrrygowooroogorogggoggrryoybbbbbby&move=R' D' R D R' D' R D R' D' R D R' D' R D R' D' R D");
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+
+  <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°9
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Arêtes couronne centrale :</h1>
+            <h2>Face Blanche vers le bas = Face Haute Jaune</h2>
+            <p>Chercher une arête qui peut être installé sur la couronne centrale. Ici, l'arête rouge et bleu peut être installé par la couleur rouge vers le bleu à gauche.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&position=llu&borderwidth=7&facelets=wwwwwwwwwgbyryooybrgyrryrygooyooyorrgggoggrrbbbybbgbbo&move=x x z z z d' d' d'")
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+      <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°9
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Algorithme - Arrêt - Gauche</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé au-dessus du deuxième cube.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&position=lld&borderwidth=7&facelets=gbyryooybwwwwwwwwwryrrrrbgrorogooyooyygbbbbbbrogyggygg&move=U' L' U L U F U' F'")
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+
+  <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°9
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Chercher arrêt disponible sur face haute à installé sur la couronne central sur ces bonnes couleurs.</h1>
+            <h2>Sortir arête de la couronne centrale de la gauche et bien la positionner sur sa couleur prête à être installé.</h2>
+            <p>Paragraphe d'explication situé au-dessus du deuxième cube.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&position=llu&borderwidth=7&facelets=gogyyybybwwwwwwwwwrrryrrogryrobooyooygobbbbbbyogrggrgg&move=z U' L' U L U F U' F' U U")
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+ <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°9
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Placer arrête sur la couronne central à droite</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé au-dessus du deuxième cube.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("bgcolor=ffffff&buttonbar=1&position=llu&borderwidth=7&facelets=robyyyrygwwwwwwwwwbrggggyggybbbbbgbbyoyyrrrrrorogooooo&move=U R U' R' U' F' U F")
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+ <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°9
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Chercher et préparer arrêt a installé</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé au-dessus du deuxième cube.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&position=llu&borderwidth=7&facelets=oybgyybgrwwwwwwwwwgrgoggyggybbrbbrbbyyyyrrrrrorogooooo&move=z z d d d")
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+
+ <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°9
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Titre Principal H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé au-dessus du deuxième cube.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("bgcolor=ffffff&buttonbar=1&position=llu&borderwidth=7&facelets=rgbyygbyowwwwwwwwwyrrrrrryrgoooooyoogbobbbbbbyrgyggygg&move=U R U' R' U' F' U F")
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+ <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°9
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Arêtes face haute jaune sur leurs couleurs de la dernière couronne.</h1>
+            <h2>Chercher deux arêtes sur leurs bonnes couleurs et qui se suivent</h2>
+            <p>Paragraphe d'explication situé au-dessus du deuxième cube.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&position=llu&borderwidth=7&facelets=yybyyyyybwwwwwwwwworrbrrrrrooorooroogggbbbbbbyggoggygg&move=U U z'")
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+
+
+  <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°2
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Titre Principal H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé au-dessus du deuxième cube.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&position=llu&borderwidth=7&facelets=bybyyyyyywwwwwwwwwybbobbybbgggggggggrboooooooorrrrrrrr&move=R U R' U R U U R' U")
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+
+  <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°2
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Titre Principal H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé au-dessus du deuxième cube.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&position=llu&borderwidth=7&facelets=gybyyyryywwwwwwwwwybbbbbrbbbggggggggooyooooooyrrrrrorr&move=L' U R U' L U R' U'")
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+
+  <!-- ==========================================
+         BLOC COMPLET POUR LE CUBE N°2
+         ========================================== -->
+    <div class="section-un-cube">
+        
+        <!-- TEXTE EN HAUT DU CUBE N°2 -->
+        <div class="explication-haut">
+            <h1>Titre Principal H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé au-dessus du deuxième cube.</p>
+        </div>
+          
+        <!-- LE CUBE N°2 -->
+        <div class="cube-box">
+            <script>
+                // Mettez ici vos propres réglages et votre algorithme pour le cube 2
+                AnimCube3("scale=0&bgcolor=ffffff&buttonbar=1&position=llu&borderwidth=7&facelets=bybyyyyyywwwwwwwwwobbbbbrbbgggggggggyooooooooyrrrrrrrr&move=R' D' R D R' D' R D U' R' D' R D R' D' R D R' D' R D R' D' R D U")
+            </script>
+        </div> 
+
+        <!-- TEXTE EN BAS DU CUBE N°2 -->
+        <div class="explication-bas">
+            <h1>Titre Final H1 - Cube 2</h1>
+            <h2>Sous-titre H2 - Cube 2</h2>
+            <p>Paragraphe d'explication situé en dessous du deuxième cube.</p>
+        </div>
+
+    </div> <!-- FIN DU BLOC CUBE N°2 -->
+
+
+
+    <!-- PIED DE PAGE : MENTION DE COLLABORATION (Intact) -->
+    <footer class="pied-de-page">
+        <p>Site réalisé avec passion par l'auteur et son collaborateur IA.</p>
+    </footer>
+
+</body>
+</html>

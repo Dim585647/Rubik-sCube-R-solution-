@@ -1,0 +1,444 @@
+/* ==========================================================================
+   1. STYLES GÉNÉRAUX DU SITE
+   ========================================================================== */
+body {
+    background: #ffffff;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+    color: #000000;
+}
+
+/* ==========================================================================
+   2. BARRE DE NAVIGATION COMMUNE (AVEC MENU DÉROULANT)
+   ========================================================================== */
+/* BARRE DE NAVIGATION COMMUNE */
+
+/* BARRE DE NAVIGATION PRINCIPALE */
+.menu-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #2d3748; /* Gris anthracite */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 100; /* Permet au menu de s'ouvrir PAR-DESSUS le cube sans être caché */
+}
+/* STYLE DES ONGLETS SIMPLES (Accueil, Contact) ET DU BOUTON */
+.lien-menu, .bouton-deroulant {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.lien-menu:hover, .bouton-deroulant:hover {
+    background-color: purple; /* Couleur violette au survol */
+}
+/* STRUCTURE DU MENU DÉROULANT */
+.onglet-deroulant {
+    position: relative;
+    display: inline-block;
+}
+/* LA LISTE CACHÉE PAR DÉFAUT */
+.liste-liens {
+    display: none; /* Cache la liste */
+    position: absolute;
+    background-color: #ffffff; /* Fond blanc pour la liste */
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Ombre pour effet de relief */
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+/* STYLE DES LIENS À L'INTÉRIEUR DE LA LISTE */
+.liste-liens a {
+    color: #2d3748;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: sans-serif;
+    font-size: 0.95rem;
+    text-align: left;
+    transition: background 0.2s;
+}
+/* SURVOL DES LIENS DANS LA LISTE */
+.liste-liens a:hover {
+    background-color: #f1f1f1;
+    color: purple;
+}
+/* S'OUVRE AU SURVOL (Ordinateur) ET AU CLIC (Android) */
+.onglet-deroulant:hover .liste-liens,
+.onglet-deroulant:focus-within .liste-liens {
+    display: block;
+}
+/* OPTIMISATION RESPONSIVE POUR ÉCRANS ANDROID (MOBILE) */@media (max-width: 500px) {
+    .menu-navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .lien-menu, .bouton-deroulant {
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .onglet-deroulant {
+        width: 100%;
+    }
+
+    .liste-liens {
+        position: relative; /* S'intègre dans le flux sur mobile au lieu de flotter */
+        width: 100%;
+        box-shadow: none;
+        background-color: #3d495d; /* Fond légèrement plus clair que le menu */
+        margin-top: 0;
+    }
+
+    .liste-liens a {
+        color: #ffffff;
+        text-align: center;
+    }
+    
+    .liste-liens a:hover {
+        background-color: purple;
+        color: #ffffff;
+    }
+}
+/* ==========================================================================
+   3. PAGES DE TEXTES CLASSIQUES (ACCUEIL & PRÉSENTATION)
+   ========================================================================== */
+.conteneur-presentation {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    box-sizing: border-box;
+}
+
+.section-introduction {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-introduction h1 {
+    color: purple;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.section-introduction .sous-titre {
+    color: #4a5568;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 0;
+}
+
+.bloc-texte {
+    margin-bottom: 35px;
+}
+
+.bloc-texte h2 {
+    color: #2b4c7e; /* Bleu Royal de l'accueil */
+    font-size: 1.6rem;
+    text-align: center;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.bloc-texte p {
+    color: #2d3748;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   4. STRUCTURE DE LA PAGE DES CUBES (MULTI-CUBES SANS CONFLIT)
+   ========================================================================== */
+
+/* Boîte globale qui enveloppe un cube et ses textes (Haut et Bas) */
+.section-un-cube {
+    max-width: 700px;
+    margin: 0 auto 80px auto; /* 80px d'espace sous chaque bloc pour respirer */
+    padding: 0 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Rend la boîte du cube parfaitement carrée sur PC et Android (Plus d'écrasement) */
+.cube-box {
+    width: 90vw;             
+    max-width: 350px;        
+    height: 90vw;            
+    max-height: 350px;       
+    margin: 30px auto;       
+    box-sizing: border-box;
+    display: block;
+}
+
+/* Force le script 3D à occuper toute sa boîte carrée */
+.cube-box div, 
+.cube-box canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+/* Sécurité pour les petits boutons d'action natifs d'AnimCube */
+.cube-box text, 
+.cube-box .buttonbar, 
+.cube-box span {
+    font-family: Arial, sans-serif !important;
+    font-size: 14px;
+    color: #000000 !important;
+}
+
+/* ==========================================================================
+   5. PERSONNALISATION DES COULEURS INDÉPENDANTES (PAGE DES CUBES)
+   ========================================================================== */
+
+/* Style des textes situés AU-DESSUS du cube */
+.explication-haut h1 { color: purple; font-size: 1.8rem; margin-bottom: 5px; }
+.explication-haut h2 { color: #e5c158; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold; }
+.explication-haut p  { color: green; font-size: 1.05rem; line-height: 1.6; margin-bottom: 10px; }
+
+/* Style des textes situés EN DESSOUS du cube */
+.explication-bas h1 { color: #2b4c7e; font-size: 1.8rem; margin-top: 25px; margin-bottom: 5px; }
+.explication-bas h2 { color: #4a5568; font-size: 1.3rem; margin-bottom: 15px; font-weight: bold; }
+.explication-bas p  { color: #000000; font-size: 1.05rem; line-height: 1.6; margin-bottom: 10px; }
+
+/* ==========================================================================
+   6. PAGE DE CONTACT (GRILLE ET ONGLETS DE RÉSEAUX SOCIAUX)
+   ========================================================================== */
+.conteneur-contact {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    box-sizing: border-box;
+}
+
+.grille-contact {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.bloc-formulaire, .sous-bloc {
+    background-color: #f8fafc;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-sizing: border-box;
+}
+
+.champ { margin-bottom: 18px; }
+.champ label { display: block; font-weight: bold; margin-bottom: 6px; color: #2d3748; }
+.champ input, .champ select, .champ textarea {
+    width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 1rem; box-sizing: border-box;
+}
+.champ input:focus, .champ textarea:focus { border-color: purple; outline: none; }
+
+.bouton-envoi {
+    width: 100%; background-color: purple; color: white; border: none; padding: 12px;
+    font-size: 1.1rem; font-weight: bold; border-radius: 5px; cursor: pointer; transition: background 0.3s;
+}
+.bouton-envoi:hover { background-color: #2d3748; }
+
+/* Alignement et design des onglets de réseaux sociaux cliquables */
+.reseaux-sociaux {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.bouton-reseau {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff !important;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    transition: transform 0.2s, opacity 0.2s;
+}
+.bouton-reseau:hover { opacity: 0.9; transform: scale(1.03); }
+
+/* Couleurs officielles de vos onglets réseaux */
+.yt { background-color: #ff0000 !important; }
+.ig { background-color: #e1306c !important; }
+.gh { background-color: #333333 !important; }
+.wa { background-color: #25D366 !important; }
+
+/* ==========================================
+   7. PIED DE PAGE INTERACTIF (FOOTER)
+   ========================================== */
+.pied-de-page {
+    text-align: center;
+    margin-top: 50px;       
+    padding: 20px 10px;
+    border-top: 1px solid #e2e8f0; 
+}
+
+.pied-de-page p {
+    color: #718096;         
+    font-size: 0.9rem;      
+    font-style: italic;     
+    margin: 0;
+}
+
+/* ==========================================================================
+   8. OPTIMISATION RESPONSIVE SMARTPHONES (ANDROID / MOBILE)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Grille de contact passe sur une seule colonne */
+    .grille-contact {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Menu de navigation s'empile verticalement */
+    .menu-navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .lien-menu, .bouton-deroulant {
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .onglet-deroulant { width: 100%; }
+    .liste-liens { position: relative; width: 100%; box-shadow: none; background-color: #3d495d; margin-top: 0; }
+    .liste-liens a { color: #ffffff; text-align: center; }
+    .liste-liens a:hover { background-color: purple; }
+
+    /* Ajustement des tailles de texte sur mobile */
+    .section-introduction h1 { font-size: 1.7rem; }
+    .bloc-texte h2 { font-size: 1.3rem; }
+    .explication-haut h1, .explication-bas h1 { font-size: 1.4rem; }
+}
+
+/* ==========================================
+   REPARATION : RESTAURATION PHOTOS & LISTES DE L'ACCUEIL
+   ========================================== */
+
+/* Recentre le bloc contenant la photo de présentation */
+.bloc-photo {
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* Force l'image de l'accueil à rester responsive et arrondie */
+.bloc-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Style de la légende sous la photo */
+.legende-photo {
+    color: #718096;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+/* Recentre et espace proprement les listes de puces de l'accueil */
+.liste-presentation {
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.liste-presentation li {
+    color: #2d3748;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+/* ==========================================================================
+   11. DESIGN DE LA PAGE EN CONSTRUCTION (ÉVOLUTION DU SITE)
+   ========================================================================== */
+.bloc-chantier {
+    max-width: 600px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Style du gros émoji de chantier */
+.icone-chantier {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+/* Titre principal de la page en attente */
+.bloc-chantier h1 {
+    color: purple; /* Toujours votre couleur fil conducteur */
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+/* Texte explicatif sur l'évolution du site */
+.texte-evolution {
+    color: #2d3748;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Met en valeur la prochaine étape du projet */
+.texte-evolution.animateur {
+    background-color: #f7fafc;
+    padding: 15px;
+    border-left: 4px solid purple;
+    border-radius: 4px;
+    text-align: left;
+}
+
+/* Bouton pour revenir en arrière proprement */
+.bouton-retour {
+    display: inline-block;
+    background-color: #2d3748;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 25px;
+    transition: background 0.3s;
+}
+
+.bouton-retour:hover {
+    background-color: purple; /* Devient violet au survol */
+}
+
+/* Ajustement de la taille du titre sur smartphone Android */
+@media (max-width: 480px) {
+    .bloc-chantier h1 {
+        font-size: 1.5rem;
+    }
+    .icone-chantier {
+        font-size: 3rem;
+    }
+}
